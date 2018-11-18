@@ -1,0 +1,116 @@
+.timeline {
+    position: relative;
+    margin: $margin-xl 0;
+    .headline {
+        font-family: 'fontscript';
+        text-align: center;
+        font-size: $font-size-xl;
+        background-color: $white;
+        padding-bottom: $padding-lg;
+        position: relative;
+        z-index: 4;
+    }
+    .line {
+        width: 3px;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        bottom: 0;
+        @media all and (max-width: $screen-sm-max) {
+            left: 20px;
+        }
+    }
+    .item {
+        @include transition($default-transition);
+        clear: both;
+        width: 50%;
+        float: left;
+        position: relative;
+        margin-bottom: $margin-lg;
+        opacity: 0;
+        margin-top: 20px;
+        @media all and (max-width: $screen-sm-max) {
+            float: right;
+            width: 100%;
+        }
+        &.show {
+            @include transition($default-transition);
+            opacity: 1;
+            margin-top: 0px;
+        }
+        &.odd {
+            @media all and (min-width: $screen-md-min) {
+                float: right;
+            }
+            .content {
+                @media all and (min-width: $screen-md-min) {
+                    border-right: none;
+                    border-left: 3px solid $black;
+                    margin-left: 10%;
+                }
+                @media all and (min-width: $screen-lg) {
+                    margin-left: 20%;
+                }
+            }
+            &:before {
+                @media all and (min-width: $screen-md-min) {
+                    right: 0;
+                    left: 12px;
+                }
+            }
+            &:after {
+                @media all and (min-width: $screen-md-min) {
+                    right: auto;
+                    left: -6px;
+                }
+            }
+        }
+        .content {
+            width: 90%;
+            border-right: 3px solid $black;
+            background-color: #efefef;
+            position: relative;
+            z-index: 2;
+            @media all and (max-width: $screen-sm-max) {
+                border-right: none;
+                border-left: 3px solid $black;
+                margin-left: 10%;
+            }
+            @media all and (min-width: $screen-lg) {
+               width: 80%; 
+            }
+        }
+        &:before {
+            position: absolute;
+            height: 3px;
+            content: " ";
+            display: block;
+            background-color: $black;
+            top: 50%;
+            left: 0;
+            right:  10px;
+            margin-top: -2px;
+            z-index: 1;
+            @media all and (max-width: $screen-sm-max) {
+                right: 0;
+                left: 15px;
+            }
+        }
+        &:after {
+            width: auto;
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            margin-top: -10px;
+            font-family: 'Glyphicons Halflings';
+            content: "\e165";
+            background-color: $white;
+            @media all and (max-width: $screen-sm-max) {
+                right: auto;
+                left: -2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:300,300i,400,400i,700,700i|Waiting+for+the+Sunrise|Ultra|EB+Garamond";
+
+$default-font: 'Source Sans Pro', sans-serif;
+$serif-font: 'EB Garamond', sans-serif;
+$sans-serif-font: 'Source Sans Pro', sans-serif;
+$headline-font: 'Ultra', sans-serif;
+$handwriting-font: 'Waiting for the Sunrise', cursive;
+$form-font: 'Inconsolata', monospace;
+
+$font-size-default: 16px;
+$font-size-xl: $font-size-default * 4;
+$font-size-lg: $font-size-default * 2;
+$font-size-md: $font-size-default * 1.5;
+$font-size-sm: $font-size-default * 0.85;
+$font-size-xs: $font-size-default * 0.5;
+
+$default-letter-spacing: 0.5px;
+$button-letter-spacing: 0.15em;
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+            url('#{$file-path}.woff') format('woff'),
+            url('#{$file-path}.otf') format('otf'),
+            url('#{$file-path}.ttf') format('truetype');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+    // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        @font-face {
+            font-family: $font-family;
+                src: url('#{$file-path}.svg##{$font-family}') format('svg');
+        }
+    }
+}

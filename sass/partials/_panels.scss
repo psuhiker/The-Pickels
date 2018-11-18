@@ -1,0 +1,49 @@
+.panelSlide {
+    @include transition($slow-transition);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: 1001;
+    overflow: hidden;
+    &--top {
+        @extend .panelSlide;
+        @include transition($slow-transition);
+        bottom: 100%;
+        left: 0;
+        &.active {
+            @include transition($slow-transition);
+            bottom: 0;
+        }
+    }
+    &--right {
+        @extend .panelSlide;
+        @include transition($slow-transition);
+        left: 100%;
+        top: 0;
+        &.active {
+            @include transition($slow-transition);
+            left: 0;
+        }
+    }
+    &--bottom {
+        @extend .panelSlide;
+        @include transition($slow-transition);
+        top: 100%;
+        left: 0;
+        &.active {
+            @include transition($slow-transition);
+            top: 0;
+        }
+    }
+    &--left {
+        @extend .panelSlide;
+        @include transition($slow-transition);
+        right: 100%;
+        top: 0;
+        &.active {
+            @include transition($slow-transition);
+            right: 0;
+        }
+    }
+}

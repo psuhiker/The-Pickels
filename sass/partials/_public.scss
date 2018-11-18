@@ -1,0 +1,19 @@
+.public {
+    .search--main,
+    .menu--main,
+    .weather-list,
+    #footer .events,
+    .comments-button,
+    .share-this {
+        display: none;
+    }
+    .logo {
+        pointer-events: none;
+    }
+    #footer .lg-margin--top {
+        margin-top: 0;
+    }
+    .container {
+        min-height: 80vh;
+    }
+}

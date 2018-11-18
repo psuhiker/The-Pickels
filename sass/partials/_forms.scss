@@ -1,0 +1,77 @@
+.form {
+	&-control {
+		@include transition($default-transition);
+		-webkit-appearance: none;
+		&[type=text], &[type=password], &[type=email] {
+			padding: ($padding-default * 1.5) $padding-default;
+			font-size: $font-size-md;
+			font-family: $form-font;
+		}
+		&:focus {
+			@include transition($default-transition);
+			@include box-shadow($default-box-shadow);
+            border-color: rgba($black, 0.25);
+        }
+        
+        .search & {
+			height: 33px;
+		}
+        &--handwriting {
+        	@include box-shadow(none);
+            width: 100%;
+            position: relative;
+            left: 0;
+            padding: $padding-lg 0 0 0;
+            font-family: $handwriting-font;
+            background: transparent;
+            -webkit-appearance: none;
+            border: none;
+            font-size: $font-size-md;
+            border-bottom: 1px solid rgba($black, 0.15);
+            resize: none;
+            margin-top: 0;
+            &:focus {
+            	-webkit-appearance: none;
+            	outline: none;
+            }
+            &__xl {
+            	@extend .form-control--handwriting;
+                font-size: $font-size-xl;
+            }
+            &__lg {
+            	@extend .form-control--handwriting;
+                font-size: $font-size-lg;
+            }
+            &.grey {
+                color: #757575;
+            }
+            &.no-border {
+                border: none;
+            }
+        }
+        &--select {
+            &:after {
+                content: "\e114";
+                display: block;
+                position: absolute;
+                right: $margin-lg;
+                top: ($margin-lg * 1.25);
+                font-family: 'Glyphicons Halflings';
+            }
+        }
+    }
+}
+
+select.form-control--handwriting:after {
+    content: "test";
+    position: absolute;
+    display: block;
+}
+
+#filterForm {
+    .reset {
+        position: absolute;
+        right: 27px;
+        top: 11px;
+    }
+}

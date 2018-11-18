@@ -1,0 +1,33 @@
+/* Removes Unneeded Items */
+
+#menu-posts-wish-list,
+#menu-posts-birthdays,
+#menu-posts-anniversaries,
+#menu-posts-holidays,
+.menu-icon-jetpack, 
+.menu-icon-dashboard .wp-submenu, 
+.blavatar, 
+.toplevel_page_jetpack, 
+#collapse-menu, 
+.menu-icon-tools, 
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(2), 
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(3),
+#contextual-help-link-wrap,
+#toplevel_page_edit-post_type-acf .wp-submenu, #multisite_clone_metabox {
+    display: none !important;
+}
+
+/* Overrides WP Mobile Menu Collapse for Toggle Button */
+
+#wp-admin-bar-admin_bar_switch_view {
+    display: block !important;
+}
+
+/* Augments Admin Sidebar Menu */
+
+.wp-menu-separator {
+	height:  10px;
+	background-color:  #000;
+	border-top:  1px solid #333;
+	border-bottom:  1px solid #333;
+}

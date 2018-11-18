@@ -1,0 +1,57 @@
+#footer {
+	position: relative;
+	padding: $padding-xl $padding-lg;
+	.weather-list {
+		text-shadow: $default-text-shadow;
+		@media all and (max-width: $screen-xs-max) {
+			text-align: center;		
+		}
+		@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			font-size: $font-size-sm;
+			white-space: nowrap;
+		}
+		@media all and (min-width: $screen-sm-min) {
+			margin-left: $margin-lg;	
+		}
+		.city {
+			width: 120px;
+			display: inline-block;
+			@media all and (max-width: $screen-xs-max) {
+				width: auto;
+				margin-right: $margin-sm;
+			}
+		}
+		.weather {
+			display: inline;
+			p {
+				display: inline;
+			}
+		}
+	}
+	.events {
+		text-shadow: $default-text-shadow;
+		margin-bottom: -$margin-lg;
+		@media all and (max-width: $screen-xs-max) {
+			margin-top: $margin-lg;
+		}
+		.event {
+			text-align: center;
+			margin-bottom: $margin-lg;
+			.month {
+				font-size: $font-size-sm;
+				display: block;
+			}
+			.day {
+				font-family: $headline-font;
+				font-size: $font-size-xl;
+				display: block;
+				line-height: 1;
+			}
+			.title {
+				display: block;
+				color: $white;
+				font-size: $font-size-sm;
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+/*
+Theme Name: The Pickels
+Author: Jordy Pickel
+Author URI: http://www.thepickelcom/
+Description: New 2018 Theme for ThePickels.com
+Version: 4.0
+*/
+
+@import "sass/main.css";
+
+/* To Add to SASS */
+
+/* Moves Admin Bar to Bottom */
+
+#wpadminbar {
+    bottom:  0px !important;
+    top: auto !important;
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+}
+
+	#wpadminbar:hover {
+		opacity: 1;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+	}
+	
+	@media all and (max-width: 768px) {
+        #wpadminbar {
+            display: none;
+        }
+    }
+	
+html {
+    margin: 0px !important;
+}
+	
+html.hidden {
+	display: block !important;
+}
+
+.recaptcha-wrap label, #wp-admin-bar-customize, #wp-admin-bar-tribe-events {
+    display: none !important;
+}
+
+/* Needed for Embed Video WorPress */
+
+.embed-vimeo iframe {
+    max-width: 100%;
+}
+        
+/* Default Wordpress Styles */
+
+.alignnone, a img.alignnone, .wp-caption.alignnone {
+    margin: 5px 20px 20px 0 !important;
+	}
+	
+.alignleft, a img.alignleft, .wp-caption.alignleft {
+    float: left !important;
+    margin: 5px 20px 20px 0 !important;
+	}
+	
+.aligncenter, div.aligncenter, a img.aligncenter {
+    display: block !important;
+    margin: 5px auto 5px auto !important;
+	}
+
+.alignright, a img.alignright, .wp-caption.alignright {
+    float:right !important;
+    margin: 5px 0 20px 20px !important;
+	}
+	
+.gallery-item {
+    margin-top: 0;
+    margin-left: 10px;
+}

@@ -1,0 +1,144 @@
+#header {
+	position: relative;
+    .logo {
+        @include transition($default-transition);
+        padding: $padding-default 0 0 $padding-xs;
+        text-align: center;
+        opacity: 1;
+        &.opacity-none {
+            @media all and (max-width: $screen-sm-max) {
+                @include transition($default-transition);
+                opacity: 0;
+            }
+        }
+        img {
+            max-height: 50px;
+        }
+    }
+    .name {
+        span {
+            display: none;
+        }
+    }
+    .menu {
+        &--main {
+            @include transition($default-transition);
+            position: absolute;
+            top: 0;
+            right: 0;
+            /*font-size: $font-size-md;*/
+            height: 100%;
+            padding: 0 $padding-lg;
+            /*@media all and (max-width: $screen-sm-max) {
+                font-size: $font-size-sm;
+                padding-right: 0;
+                position: relative;
+                clear: both;
+            }*/
+            &.opacity-none {
+                @media all and (max-width: $screen-xs-max) {
+                    @include transition($default-transition);
+                    opacity: 0;
+                }
+            }
+            &__label {
+                font-size: 1.2em;
+            }
+            .list-inline {
+                margin-right: $margin-default;
+                @media all and (max-width: $screen-xs-max) {
+					display: block;
+					width: 100%;
+				}
+				@media all and (max-width: $screen-sm-max) {
+					margin: 0 0 $margin-default 0;
+					text-align: center;
+				}
+                li {
+                   @media all and (max-width: $screen-xs-max) {
+                       display: block;
+                   }
+                   @media all and (max-width: $screen-sm-max) {
+                   	display: inline;
+                   }
+                }
+            }
+            .dropdown-toggle {
+                @include box-shadow(none);
+                border: none;
+                background-color: transparent;
+                &:focus, &:hover, &:active {
+                    color: $white;
+                }
+            }
+            .dropdown-menu {
+                left: auto;
+                right: 0;
+                a {
+                    background-color: rgba($black,0);
+                    display: block;
+                    font-weight: normal;
+                    padding: $padding-xs $padding-default;
+                    &:hover {
+                        background-color: rgba($black,0.25);
+                    }
+                }
+                ul {
+                    li {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .divider {
+                    background-color: rgba($black, 0.1);
+                }
+            }
+            a {
+                color: $white;
+                text-shadow: $default-text-shadow;
+                &:hover {
+                    color: $white;
+                    opacity: 0.75;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .search {
+    	&--main {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		font-size: $font-size-md;
+    		height: 100%;
+    		padding: 0 $padding-lg;
+    		.hamburger {
+                float: left;
+                padding-right: $padding-lg;
+                .glyphicon {
+                    line-height: 1.75;
+                    text-shadow: $default-text-shadow;
+                }
+            }
+            .search {
+            	@include transition($default-transition);
+            	position: absolute;
+            	left: 75px;
+            	width: 0;
+            	overflow: hidden;
+            	&.active {
+            		@include transition($default-transition);
+            		width: 300px;
+            		@media all and (max-width: $screen-xs-max) {
+                        width: 75vw;
+                    }
+                }
+    		    .form-control {
+                    padding: $padding-xs $padding-sm;
+                    font-size: $font-size-default;
+                    width: 100%;
+                }
+            }
+		}
+	}
+}

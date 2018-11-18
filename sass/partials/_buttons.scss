@@ -1,0 +1,126 @@
+.btn {
+	@include transition($default-transition);
+	font-size:  $font-size-sm;
+	padding: $padding-xs $padding-sm;
+	font-family: $default-font;
+    &:hover, &:focus, &:active:focus {
+        @include transition($default-transition);
+        color: $white;
+        outline: none;
+    }
+    a, a:focus, a:hover, a:active:focus {
+        text-decoration: none;
+        outline: none;
+        color: $white;
+    }
+    &-sm {
+        font-size: 0.9em;
+    }
+    &-default {
+        background-color: $black;
+        border: none;
+        color: $white;
+        opacity: 1;
+        &:hover {
+            background-color: $black;
+            color: $white;
+            box-shadow: ($default-box-shadow-hover);
+            opacity: 0.85;
+        }
+    }
+    &-group-justified {
+        > .btn {
+            width: 100%;
+        }
+        .dropdown-menu {
+            width: 100%;
+        }
+    }
+}
+
+.btn {
+	/*text-shadow: $button-text-shadow;*/
+	cursor: pointer;
+    &-default {
+        
+    }
+    &-primary {
+        
+    }
+    &-success {
+        
+    }
+    &-info {
+        
+    }
+    &-warning {
+        
+    }
+    &-danger {
+        
+    }
+}
+
+.button {
+    cursor: pointer;
+    &--flip {
+        @extend .button;
+        @include transition($default-transition);
+        background: $black;
+        color: $white;
+        overflow: hidden;
+        border: none;
+        display: inline-block;
+        text-transform: uppercase;
+        outline: none;
+        position: relative;
+        white-space: nowrap;
+        padding: $padding-xs $padding-xl;
+        border-radius: $default-border-radius;
+        font-size: $font-size-default;
+        text-align: center;
+        letter-spacing: $button-letter-spacing;
+        /*text-shadow: $button-text-shadow;*/
+        span {
+            &.flip {
+                @include transition($default-transition);
+                left: 0;
+                top: -100%;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: $padding-xs $padding-lg;
+                content: 'Read More';
+                background: $black;
+                display: block;
+                z-index: 2;
+            }
+            &.text {
+                @include transition($default-transition);
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+        &:hover {
+            opacity: 0.9;
+            color: $white;
+            span {
+                &.flip {
+                    top: 0;
+                }
+            }
+        }
+    }
+    &--inverse {
+        border: 1px solid $black !important;
+        &:hover {
+            background-color: $white;
+            border: 1px solid $black;
+            color: $black;
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.wish-list {
+    .items {
+        .item {
+            .remove {
+                @include transition($default-transition);
+                opacity: 0;
+                pointer-events: none;
+                margin-top: $margin-default;
+                a {
+                    .text {
+                        @include transition($default-transition);
+                        display: block;
+                        opacity: 0;
+                        font-size: $font-size-xs;
+                    }
+                }
+            }
+            .claim {
+                a {
+                    display: block;
+                    .text {
+                        @include transition($default-transition);
+                        display: block;
+                        opacity: 0;
+                        font-size: $font-size-xs;
+                    }
+                    &:hover {
+                        .glyphicon-unchecked:before {
+                            content: "\e067";
+                        }
+                    }
+                }
+                .claimed {
+                    margin: -25px;
+                    display: none;
+                    &.yes {
+                        display: block;
+                        color: $black !important;
+                    }
+                    a {
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+                .unclaimed {
+                    display: block;
+                    &.yes {
+                        display: none;
+                    }
+                }
+            }
+            &:hover {
+                .remove {
+                    @include transition($default-transition);
+                    opacity: 1;
+                    pointer-events: auto;
+                    a:hover {
+                    	text-decoration: none;
+                        .text {
+                            @include transition($default-transition);
+                            opacity: 1;
+                            color: $black;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                .claim {
+                    @include transition($default-transition);
+                    opacity: 1;
+                    pointer-events: auto;
+                    a:hover {
+                    	text-decoration: none;
+                        .text {
+                            @include transition($default-transition);
+                            opacity: 1;
+                            color: $black;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            &.yes {
+                color: lighten($black, 60%);
+                a {
+                    color: inherit;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

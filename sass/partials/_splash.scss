@@ -1,0 +1,79 @@
+.splash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .wrapper {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .box {
+        @include border-radius($xl-border-radius);
+    }
+}
+
+/*.splash {
+    background-size: cover;
+    background-repeat: no-repeat;
+    #container-logged-out {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        display: table;
+        #form {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            .wrapper {
+                border: 1px solid #ccc;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                background-color: yellow;
+                width: 50%;
+                margin:  0px auto;
+                padding:  50px 0px;
+                @media all and (min-width: $screen-sm-min) and ($screen-md-min) {
+                	width: 80%;
+                }
+                @media all and (max-width: $screen-xs-max) {
+                    width: 94%;
+                }
+                .logo {
+                    padding:  0 0 $padding-lg 0;
+                    img {
+                        max-height: 100px;
+                        width: auto;
+                    }
+                }
+            }
+            label {
+                text-align: right;
+                width: 100px;
+            }
+            input[type=text], input[type=password] {
+                width:  33.33%;
+                min-width: 300px;
+                -webkit-appearance: none;
+                -webkit-box-shadow: none;
+            }
+            input[type=submit] {
+                float: right;
+                margin-right: 50px;
+            }
+            .lost-password {
+                float: left;
+                margin-left:  30px;
+                font-size: 10pt;
+                margin-top:  10px;
+            }
+        }
+    }
+}*/

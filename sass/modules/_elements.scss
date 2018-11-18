@@ -1,0 +1,123 @@
+$padding-default: 15px;
+$padding-xs: $padding-default * 0.33;
+$padding-sm: $padding-default * 0.75;
+$padding-lg: $padding-default * 1.5;
+$padding-xl: $padding-default * 4;
+$padding-xxl: $padding-default * 6;
+
+$margin-default: 15px;
+$margin-xs: $margin-default * 0.33;
+$margin-sm: $margin-default * 0.75;
+$margin-lg: $margin-default * 2;
+$margin-xl: $margin-default * 4;
+$margin-xxl: $margin-default * 6;
+
+$default-text-shadow: 1px 1px $black;
+$button-text-shadow: 0 0 1px rgba($black, 0.5);
+//$headline-text-shadow: 3px 3px 0 $black;
+$headline-text-shadow: 3px 3px 0 rgba($black, 0.15);
+$light-text-shadow: 1px 1px rgba($black, 0.5);
+
+$default-transition: all 0.25s ease-in-out;
+$slow-transition: all 0.5s ease-in-out;
+
+$default-border-radius: 3px;
+$md-border-radius: 5px;
+$lg-border-radius: 10px;
+$xl-border-radius: 15px;
+$circle-border-radius: 50%;
+
+$default-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.15);
+$default-box-shadow-hover: 0px 0px 8px 0 rgba(0,0,0,0.25);
+$input-box-shadow-hover: 2px 2px 4px 0 rgba(0,0,0,0.25);
+$light-box-shadow-hover: 0px 0px 8px 0 rgba(255,255,255,0.75);
+$image-box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.25) !important;
+
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+@mixin content-columns($columnCount, $columnGap: $gridGutterWidth) {
+  -webkit-column-count: $columnCount;
+     -moz-column-count: $columnCount;
+          column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+     -moz-column-gap: $columnGap;
+          column-gap: $columnGap;
+}
+
+@mixin border-radius($border-radius) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin box-shadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    -ms-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin content-columns($columnCount, $columnGap) {
+  -webkit-column-count: $columnCount;
+     -moz-column-count: $columnCount;
+          column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+     -moz-column-gap: $columnGap;
+          column-gap: $columnGap;
+}
+
+@mixin column-break($breakType) {
+	-webkit-column-break-inside: $breakType;
+	page-break-inside: $breakType;
+	break-inside: $breakType;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+
+
+@mixin zoom($zoom) {
+    --ms-zoom: $zoom;
+    -moz-transform: scale($zoom);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale($zoom);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale($zoom);
+    webkit-transform-origin: 0 0;
+}

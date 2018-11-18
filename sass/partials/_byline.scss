@@ -1,0 +1,57 @@
+.byline {
+	font-size: $font-size-sm;
+	text-align: center;
+	font-family: $serif-font;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	display: inline-block;
+	padding: $padding-xs $padding-lg;
+	position: relative;
+	.bg-overlay {
+	    display: none;
+	    position: absolute;
+	    background-color: $white;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: -1;
+	    opacity: 0.5;
+	}
+	&.affix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+        background-color: $white;
+        line-height: 3em;
+        z-index: 1001;
+        .no-border & {
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
+        }
+        .bg-overlay {
+            display: block
+        }
+        .share-this, .add-comment {
+            display: inline;
+        }
+        .mobile-date {
+            display: none;
+        }
+    }
+    .no-border & {
+        border: none;
+    }
+.share-this, .add-comment {
+        display: none;
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

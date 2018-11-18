@@ -1,0 +1,185 @@
+@import "https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:300,300i,400,400i,700,700i|Waiting+for+the+Sunrise|Ultra|EB+Garamond";
+
+body {
+	background-color: transparent;
+	font-family: "Source Sans Pro",sans-serif;
+}
+
+#wpadminbar,
+#adminmenuback,
+#adminmenuwrap,
+h1.wp-heading-inline,
+.page-title-action,
+#titlediv div.inside,
+#acf-aba_membership,
+#acf-member_id,
+#screen-options-link-wrap,
+#wpfooter,
+#acf-promoted,
+#businesses_categoriesdiv,
+#tagsdiv-post_tag,
+#delete-action,
+#minor-publishing-actions,
+#misc-publishing-actions,
+#submitdiv h2,
+#submitdiv button,
+#postimagediv,
+.user-rich-editing-wrap,
+.user-admin-color-wrap,
+.user-comment-shortcuts-wrap,
+.show-admin-bar.user-admin-bar-front-wrap,
+#screen-meta,
+#screen-meta-links,
+#acf-businesses,
+.user-profile-picture,
+.user-description-wrap,
+.user-url-wrap,
+#profile-page h1,
+#profile-page h2:nth-child(4),
+#profile-page h2:nth-child(10),
+#acf-map_override,
+#categorydiv,
+#nf_admin_metaboxes_appendaform,
+#email-users-notify-post,
+#acf-allow_social_sharing .label,
+.button.nf-insert-form,
+.mce-statusbar,
+#post-status-info {
+    display: none !important;
+}
+
+html.wp-toolbar {
+	padding-top:  0px;
+}
+
+#wpbody {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#titlediv #title {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 50px;
+    /*font-family: "Waiting for the Sunrise",cursive;*/
+    font-family: "Ultra",sans-serif;
+    color: #333;
+}
+
+    #titlediv #title:focus {
+        outline: none;
+    }
+
+#poststuff {
+    position: absolute;
+}
+
+#titlediv #title-prompt-text {
+    display: none;
+}
+
+#wp-content-wrap,
+#wp-content-editor-tools {
+    background: transparent !important;
+}
+
+#submitdiv,
+#major-publishing-actions {
+    background: transparent;
+    border: none;
+}
+
+.postbox {
+    box-shadow: none;
+}
+    
+/*#submitdiv, #major-publishing-actions {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+#error-page > ul {
+	display: none;
+}
+
+
+
+div#postbox-container-1 {
+    margin-top: 100px;
+}
+
+div#publishing-action {
+    position: absolute;
+    top: -200px;
+    right: 20px;
+    z-index: 999;
+    padding: 0px 0px 40px 0px;
+}
+
+div#publishing-action input[type=submit] {
+    font-size: 22pt;
+    padding: 10px 20px;
+    height: auto;
+}
+
+ul.categorychecklist li {
+    line-height: 0.5;
+}
+
+p.submit {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #fff;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+select {
+    height: 42px !important;
+}
+
+input[type=checkbox] {
+    margin: 12px 0px !important;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	border: 1px solid rgba(0,0,0,0.15) !important;
+	font-family:  Lato, sans-serif !important;
+	font-size: 16pt !important;
+	padding: 8px 15px !important;
+	height: auto !important;
+	box-shadow: none !important;
+	transition: all 0.2s !important;
+	-webkit-transition: all 0.2s !important;
+	-moz-transition: all 0.2s !important;
+	margin-right:  10px !important;
+	-webkit-appearance: none;
+}
+
+	input[type=text]:focus,
+	input[type=email]:focus,
+	input[type=password]:focus,
+	textarea:focus {
+		border:  1px solid  rgba(0,0,0,0.25) !important;
+		border-left-width: 10px !important;
+		box-shadow: none !important;
+		transition: all 0.2s !important;
+		-webkit-transition: all 0.2s !important;
+		-moz-transition: all 0.2s !important;
+		margin-right: 0px !important;
+	}
+	
+	input[type=text]:disabled:hover {
+		cursor: not-allowed;
+	}*/

@@ -1,0 +1,45 @@
+// Import Modules
+
+@import "modules/all";
+
+// Global Variables Defined Here
+
+body {
+	letter-spacing: $default-letter-spacing;
+	font-family: $default-font;
+	font-weight: 300;
+	overflow-x: hidden;
+	background-color: rgba($white,0.75);
+	@media all and (max-width: $screen-xs-max) {
+		font-size: 1.75em;
+	}
+	@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		font-size: 1.65em;
+	}
+}
+
+a:hover, .activateSearch:hover, .hideSearch:hover {
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: $margin-lg;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}

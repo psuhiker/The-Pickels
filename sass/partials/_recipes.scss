@@ -1,0 +1,35 @@
+.secondary.recipes {
+    .list {
+        @media all and (min-width: $screen-sm-min) {
+            @include content-columns(2, 15px);
+        }
+        @media all and (min-width: $screen-md-min) {
+            @include content-columns(3, 15px);
+        }
+        @media all and (min-width: $screen-lg-min) {
+            @include content-columns(4, 15px);
+        }
+        > li {
+            @include column-break(avoid);
+        }
+    }
+}
+
+.secondary.recipe {
+    .recipe {
+        /*@media all and (min-width: $screen-sm-min) {
+            height: 100vh;
+            overflow-y: scroll;
+            scrollbar: invisible;
+        }*/
+        .content {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .ingredients p {
+        margin-bottom: 0;
+    }
+}
