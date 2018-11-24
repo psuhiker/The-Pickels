@@ -59,7 +59,8 @@
         				        View Online
         				    </span>
         				    <span class="hidden-xs hidden-sm">
-        				        <?php the_field('christmas_link'); ?>
+        				        <!--<?php the_field('christmas_link'); ?>-->
+								View Online
         				    </span>
         				</a>
         			</li>

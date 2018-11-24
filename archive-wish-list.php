@@ -9,7 +9,10 @@
 
 	<style>
 		.wish-list .item {
-			margin-bottom:
+			margin-bottom: 10px;
+		}
+		.wish-list .item:nth-child(odd) {
+			clear: both;
 		}
 		.wish-list .nf-form-fields-required {
 			display: none;
