@@ -60,6 +60,21 @@
 		#user2 #recipient45 .claim {
 			display: none;
 		}
+		#user8 #recipient8 .yes,
+		#user44 #recipient44 .yes,
+		#user5 #recipient5 .yes,
+		#user4 #recipient4 .yes,
+		#user47 #recipient47 .yes,
+		#user9 #recipient9 .yes,
+		#user6 #recipient6 .yes,
+		#user12 #recipient12 .yes,
+		#user2 #recipient2 .yes,
+		#user13 #recipient13 .yes,
+		#user7 #recipient7 .yes,
+		#user3 #recipient3 .yes,
+		#user45 #recipient45 .yes,
+		#user46 #recipient46 .yes,
+		
 		#user6 #recipient44 .yes,
 		#user7 #recipient44 .yes,
 		#user5 #recipient13 .yes,
@@ -70,7 +85,22 @@
 		#user8 #recipient45 .yes,
 		#user2 #recipient46 .yes,
 		#user2 #recipient45 .yes {
-			color: #000;
+			color: #333;
+		}
+		.yes a .text,
+		.yes a .glyphicon,
+		
+		#user6 #recipient44 .yes a .text,
+		#user7 #recipient44 .yes a .text,
+		#user5 #recipient13 .yes a .text,
+		#user5 #recipient47 .yes a .text,
+		#user12 #recipient13 .yes a .text,
+		#user12 #recipient47 .yes a .text,
+		#user8 #recipient46 .yes a .text,
+		#user8 #recipient45 .yes a .text,
+		#user2 #recipient46 .yes a .text,
+		#user2 #recipient45 .yes a .text {
+			color: #fff;
 		}
 		.parent {
 			display: none;
