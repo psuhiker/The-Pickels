@@ -49,6 +49,9 @@
 	    $(".menu-container").removeClass("active");
 	    $("body").removeClass("modal-open");
 	});
+	$(".mainMenu").on("click", function() {
+	    $(".mainMenuContainer").toggleClass("open");
+	});
 </script>
 
 
@@ -65,6 +68,6 @@
 </script>
 
 
-<!-- Weather -->
+<!-- Weather 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>
+<script src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>-->

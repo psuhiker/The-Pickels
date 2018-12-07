@@ -66,8 +66,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="menu--main vertical-align">
     	<div class="wrapper">
     	    <div class="content">
-    	    	<div class="btn-group" role="group">
-    	    		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    	    	<div class="btn-group dropdown mainMenuContainer" role="group">
+    	    		<button type="button" class="btn btn-default dropdown-toggle mainMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     	    			Menu <span class="caret"></span>
     	    		</button>
     	    		<ul class="dropdown-menu">
