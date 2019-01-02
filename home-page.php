@@ -10,6 +10,7 @@
 				color: #FFF;
 				border-radius: 0;
 				font-weight: bold;
+				display: none;
 			}
 			.alert.christmas .get-started {
 				float: right;

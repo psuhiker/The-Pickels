@@ -1,124 +1,8 @@
 <div class="clearfix"></div>
 
 <div id="footer">
-
-	<div class="col-xs-12 col-sm-3">
-		
-		<ul class="list-unstyled weather-list">
-		
-			<li>
-				
-				<span class="city">Ardmore, PA</span>
-				<div id="weather_ardmore" class="weather">
-				    <img src="<?php bloginfo('template_directory'); ?>/images/loading.gif" width="15" height="15">
-				</div>
-				<script>
-				    $(document).ready(function() {
-				      $.simpleWeather({
-				        location: '19003',
-				        woeid: '',
-				        unit: 'f',
-				        success: function(weather) {
-				          html = '<p><span class="icon icon-'+weather.code+'"></span>';
-				          html += ''+weather.temp+'&deg;'+weather.units.temp+'</p>';
-				      
-				          $("#weather_ardmore").html(html);
-				        },
-				        error: function(error) {
-				          $("#weather_ardmore").html('<p>'+error+'</p>');
-				        }
-				      });
-				    });
-				</script>
-				
-			</li>
-			
-			<li>
-			
-				<span class="city">Ackworth, GA</span>
-				<div id="weather_georgia" class="weather">
-				    <img src="<?php bloginfo('template_directory'); ?>/images/loading.gif" width="15" height="15">
-				</div>
-				<script>
-				    $(document).ready(function() {
-				      $.simpleWeather({
-				        location: '30101',
-				        woeid: '',
-				        unit: 'f',
-				        success: function(weather) {
-				          html = '<p><span class="icon icon-'+weather.code+'"></span>';
-				          html += ''+weather.temp+'&deg;'+weather.units.temp+'</p>';
-				      
-				          $("#weather_georgia").html(html);
-				        },
-				        error: function(error) {
-				          $("#weather_georgia").html('<p>'+error+'</p>');
-				        }
-				      });
-				    });
-				</script>
-			
-			</li>
-			
-			<li>
-							
-				<span class="city">Denver, PA</span>
-				<div id="weather_denver" class="weather">
-				    <img src="<?php bloginfo('template_directory'); ?>/images/loading.gif" width="15" height="15">
-				</div>
-				<script>
-				    $(document).ready(function() {
-				      $.simpleWeather({
-				        location: '17517',
-				        woeid: '',
-				        unit: 'f',
-				        success: function(weather) {
-				          html = '<p><span class="icon icon-'+weather.code+'"></span>';
-				          html += ''+weather.temp+'&deg;'+weather.units.temp+'</p>';
-				      
-				          $("#weather_denver").html(html);
-				        },
-				        error: function(error) {
-				          $("#weather_denver").html('<p>'+error+'</p>');
-				        }
-				      });
-				    });
-				</script>
-							
-			</li>
-			
-			<li>
-				
-				<span class="city">York, PA</span>
-				<div id="weather_york" class="weather">
-				    <img src="<?php bloginfo('template_directory'); ?>/images/loading.gif" width="15" height="15">
-				</div>
-				<script>
-				    $(document).ready(function() {
-				      $.simpleWeather({
-				        location: '17404',
-				        woeid: '',
-				        unit: 'f',
-				        success: function(weather) {
-				          html = '<p><span class="icon icon-'+weather.code+'"></span>';
-				          html += ''+weather.temp+'&deg;'+weather.units.temp+'</p>';
-				      
-				          $("#weather_york").html(html);
-				        },
-				        error: function(error) {
-				          $("#weather_york").html('<p>'+error+'</p>');
-				        }
-				      });
-				    });
-				</script>
 	
-			</li>
-		
-		</ul>
-		
-	</div>
-	
-	<div class="col-xs-12 col-sm-9 events">
+	<div class="col-xs-12 events">
 	
 		<div class="row-eq-height">
 			
@@ -138,7 +22,7 @@
 						),
 					),
 					'meta_key' => 'event_date',
-					'posts_per_page' => 4,
+					'posts_per_page' => 6,
 					'orderby' => 'meta_value_num',
 					'order'	=> 'ASC'
 				));
@@ -179,7 +63,7 @@
 							$day = ltrim($day, '0');
 						?>
 			
-				    <div class="col-xs-6 col-md-3 event">
+				    <div class="col-xs-4 col-md-2 event">
 				    	<span class="month"><?php echo $month; ?></span>
 				    	<span class="day"><?php echo $day; ?></span>
 				    	<span class="title">
