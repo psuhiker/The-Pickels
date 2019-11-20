@@ -6,7 +6,8 @@
 
     <?php if ( is_front_page() ) { ?>
     
-        <?php include (TEMPLATEPATH . '/home-page.php' ); ?>
+        <?php //include (TEMPLATEPATH . '/home-page.php' ); ?>
+        <?php include (TEMPLATEPATH . '/christmas.php' ); ?>
         
     <?php } elseif ( is_home() ) { ?>
     

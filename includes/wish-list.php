@@ -2,7 +2,7 @@
     <div class="stripes"></div>
     <div class="container">
     	<div class="col-lg-10 col-lg-offset-1">
-		    <h1 class="text-center headline--shadow">Wish Lists</h1>
+		    <h1 class="text-center headline--shadow">Pickel Wish Lists</h1>
     		<div class="text-center">
     			<div class="byline--wrapper no-border">
     		    	<div class="byline no-margin--top">
